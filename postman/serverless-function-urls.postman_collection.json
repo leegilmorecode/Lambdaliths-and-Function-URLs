@@ -1,0 +1,67 @@
+{
+  "info": {
+    "_postman_id": "892f4861-ac97-4f78-b3f4-94bd29fed409",
+    "name": "serverless-function-urls",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "auth": {
+          "type": "awsv4"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"order\": {\n    \"customer\": {\n      \"name\": \"Lee Gilmore\",\n      \"email\": \"johndoe@example.com\",\n      \"phone\": \"+1234567890\",\n      \"address\": \"123 Main Street, City, State, ZIP\"\n    },\n    \"items\": [\n      {\n        \"name\": \"Takoyaki\",\n        \"quantity\": 2,\n        \"price\": 5.99\n      },\n      {\n        \"name\": \"Yakitori\",\n        \"quantity\": 3,\n        \"price\": 4.49\n      },\n      {\n        \"name\": \"Okonomiyaki\",\n        \"quantity\": 1,\n        \"price\": 8.99\n      }\n    ],\n    \"deliveryMethod\": \"pickup\",\n    \"paymentMethod\": \"credit_card\",\n    \"totalAmount\": 31.93\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.eu-west-1.amazonaws.com/prod/v1/orders/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "v1", "orders", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.execute-api.eu-west-1.amazonaws.com/prod/v1/orders/d7fa6abf-b6a5-473f-b48c-1391a8c5b17a",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "eu-west-1",
+            "amazonaws",
+            "com"
+          ],
+          "path": [
+            "prod",
+            "v1",
+            "orders",
+            "d7fa6abf-b6a5-473f-b48c-1391a8c5b17a"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
